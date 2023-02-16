@@ -86,12 +86,12 @@ app.layout = dbc.Container(children=[
                     dbc.Row([
                         dbc.Col([
                             ThemeSwitchAIO(aio_id="theme", themes=[url_theme1, url_theme2]),
-                            html.Legend("Mipel")
-                        ])
+                            html.Legend("Somacal", style={'font-size': '150%', 'font-weight': 'bold'})
+                        ], align="center")
                     ], style={'margin-top': '10px'}),
                     dbc.Row([
                         dbc.Col([
-                            dbc.Button("Visite o Site", href="https://www.mipel.com.br/", target="_blank")
+                            dbc.Button("Visite o Site", href="https://www.linkedin.com/in/eduardo-alberto-somacal/", target="_blank")
                         ])
                     ], style={'margin-top': '10px'})
                 ])
@@ -526,4 +526,4 @@ def controller(n_intervals, play, stop, rangeslider, controller):
 
 # Run server
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False, port=8080, host="0.0.0.0")
